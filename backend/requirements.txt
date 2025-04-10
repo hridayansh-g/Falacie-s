@@ -5,6 +5,7 @@ gdown>=3.10.1
 tqdm>=4.30.0
 Pillow>=5.2.0
 opencv-python>=4.5.5.64
+deepface>=0.0.79
 tensorflow>=1.9.0
 keras>=2.2.0
 mtcnn>=0.1.0
@@ -12,4 +13,4 @@ retina-face>=0.0.1
 fire>=0.4.0
 gunicorn>=20.1.0
 fastapi
-uvicorn
+uvicorndeepface>=0.0.79
