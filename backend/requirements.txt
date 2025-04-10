@@ -18,8 +18,8 @@ gdown>=3.10.1
 
 # Emotion detection and face analysis
 deepface==0.0.79
-tensorflow==2.11.0
-keras==2.11.0
+tensorflow==2.17.1
+keras==3.2.0
 tf-keras
 mtcnn>=0.1.0
 retina-face>=0.0.1
