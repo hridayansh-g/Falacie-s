@@ -1,3 +1,4 @@
+//by Hridayansh, Riya, Ishita, Lokendra
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -20,6 +21,13 @@ const MovieCard = ({ title, overview, poster }) => (
   </div>
 );
 
+// ✅ Add PropTypes for MovieCard
+MovieCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
+  poster: PropTypes.string.isRequired,
+};
+
 // Main EmotionResult component
 const EmotionResult = ({ emotion, movies }) => {
   const hollywoodMovies = movies.filter((movie) => movie.original_language === "en");
@@ -36,8 +44,13 @@ const EmotionResult = ({ emotion, movies }) => {
         <section className="mb-10">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">🎬 Hollywood Movies</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {hollywoodMovies.map((movie, index) => (
-              <MovieCard key={`hollywood-${index}`} {...movie} />
+            {hollywoodMovies.map((movie) => (
+              <MovieCard
+                key={movie.id}
+                title={movie.title}
+                overview={movie.overview}
+                poster={movie.poster}
+              />
             ))}
           </div>
         </section>
@@ -48,8 +61,13 @@ const EmotionResult = ({ emotion, movies }) => {
         <section className="mb-10">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">🎥 Bollywood Movies</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {bollywoodMovies.map((movie, index) => (
-              <MovieCard key={`bollywood-${index}`} {...movie} />
+            {bollywoodMovies.map((movie) => (
+              <MovieCard
+                key={movie.id}
+                title={movie.title}
+                overview={movie.overview}
+                poster={movie.poster}
+              />
             ))}
           </div>
         </section>
@@ -58,11 +76,12 @@ const EmotionResult = ({ emotion, movies }) => {
   );
 };
 
-// Prop Types
+// Prop Types for EmotionResult
 EmotionResult.propTypes = {
   emotion: PropTypes.string.isRequired,
   movies: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
       poster: PropTypes.string.isRequired,
