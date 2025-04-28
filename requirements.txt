@@ -19,6 +19,6 @@ gdown>=3.10.1
 # Emotion detection and face analysis
 deepface==0.0.79
 tensorflow==2.18.1
-keras  # Let pip resolve the correct version
+keras  # Let pip resolve the correct version for compatibility with tensorflow
 mtcnn>=0.1.0
 retina-face>=0.0.1
