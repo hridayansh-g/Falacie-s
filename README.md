@@ -15,6 +15,13 @@
 
 ---
 
+## 📷 Demo
+Here’s a preview of Falacie-s in action:
+![Demo Screenshot](assets/a.png)
+![Demo Screenshot](assets/b.png)
+![Demo Screenshot](assets/c.png)
+![Demo Screenshot](assets/d.png)
+
 ## 🧪 **Tech Stack**
 
 | **Layer**   | **Technologies**                          |
