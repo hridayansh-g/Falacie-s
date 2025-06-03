@@ -50,7 +50,7 @@ TMDB_API_KEY=your_tmdb_api_key_here
     npm run dev
 
 🔗 That’s it — open http://localhost:5173 to see the app running! 🎉
-
+```
 ## 🔒 **Security & Privacy**
 
 - ✅ **.env** files are ignored in Git.
