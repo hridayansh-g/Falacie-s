@@ -35,48 +35,42 @@
 git clone https://github.com/hridayansh-g/Falacie-s.git
 cd Falacie-s
 
-### 🛠️ 2. **Backend Setup**
-
-```bash
-cd backend
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+2. 🛠️ Backend Setup
+    cd backend
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
 
 🔑 Create a .env file in the backend/ folder and add your TMDB API key like this:
 TMDB_API_KEY=your_tmdb_api_key_here
 
-### 🛠️ 3. **Frontend Setup**
-
-cd ../frontend
-npm install
-npm run dev
+3. ⚛️ Frontend Setup
+    cd ../frontend
+    npm install
+    npm run dev
 
 🔗 That’s it — open http://localhost:5173 to see the app running! 🎉
 
-📷 Demo
+## 🔒 **Security & Privacy**
 
+- ✅ **.env** files are ignored in Git.
+- ✅ **node_modules/** and **.venv/** folders are excluded.
+- ✅ **TMDB API key** is safely accessed through environment variables.
 
-🔒 Security & Privacy
-	•	✅ .env files are ignored in Git.
-	•	✅ node_modules/ and .venv/ folders are excluded.
-	•	✅ TMDB API key is safely accessed through environment variables.
+---
 
-💼 Perfect For
-	•	🧠 AI/ML Projects & Portfolios
-	•	🎞 Emotion-Aware Recommendation Systems
-	•	🌐 API Integration Demonstrations
-	•	🧳 Job Interviews & Developer Showcases
+## 💼 **Perfect For**
 
-🙌 Authors
-	•	Hridayansh Gupta
-	•	Ishita Srivastava
-	•	Riya Dwivedi
-	•	Lokendra Prajapati
+- 🧠 **AI/ML Projects & Portfolios**
+- 🎞 **Emotion-Aware Recommendation Systems**
+- 🌐 **API Integration Demonstrations**
+- 🧳 **Job Interviews & Developer Showcases**
 
-⭐ Support the Project
-If you find this project helpful, please consider giving it a ⭐ on GitHub!
+---
 
-📩 Contact
-Want to connect or collaborate?
-📧 hridayansh3@gmail.com
+## 🙌 **Authors**
+
+- **Hridayansh Gupta**
+- **Ishita Srivastava**
+- **Riya Dwivedi**
+- **Lokendra Prajapati**
