@@ -34,23 +34,25 @@
 ```bash
 git clone https://github.com/hridayansh-g/Falacie-s.git
 cd Falacie-s
-
-2. 🛠️ Backend Setup
-    cd backend
-    python3 -m venv .venv
-    source .venv/bin/activate
-    pip install -r requirements.txt
+```
+### 2. **🛠️ Backend Setup**
+```bash
+cd backend
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 
 🔑 Create a .env file in the backend/ folder and add your TMDB API key like this:
 TMDB_API_KEY=your_tmdb_api_key_here
-
-3. ⚛️ Frontend Setup
-    cd ../frontend
-    npm install
-    npm run dev
-
-🔗 That’s it — open http://localhost:5173 to see the app running! 🎉
 ```
+### 3. **🛠️ Frontend Setup**
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+🔗 That’s it — open http://localhost:5173 to see the app running! 🎉
+
 ## 🔒 **Security & Privacy**
 
 - ✅ **.env** files are ignored in Git.
