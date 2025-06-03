@@ -1,1 +1,0 @@
-TMDB_API_KEY = "0e9c5f8d91e0ac2945f6aa24b9aeef0c"  # Replace with your actual API key
