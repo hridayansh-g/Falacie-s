@@ -21,7 +21,6 @@ const MovieCard = ({ title, overview, poster }) => (
   </div>
 );
 
-// ✅ Add PropTypes for MovieCard
 MovieCard.propTypes = {
   title: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
