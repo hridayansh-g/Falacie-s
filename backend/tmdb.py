@@ -5,6 +5,7 @@ import random
 from dotenv import load_dotenv
 
 load_dotenv()
+print("TMDB API KEY:", os.getenv("TMDB_API_KEY"))
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 
 emotion_to_genres = {
