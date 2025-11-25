@@ -5,7 +5,7 @@ requests==2.32.3
 
 fer==22.5.0
 opencv-python-headless==4.10.0.82
-onnxruntime==1.19.0
+onnxruntime==1.20.0
 numpy==1.26.4
 moviepy==1.0.3
 pillow==10.2.0
