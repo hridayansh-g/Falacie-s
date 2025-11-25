@@ -1,17 +1,14 @@
-#by Hridayansh, Riya, Ishita, Lokendra
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from deepface import DeepFace
 import base64
 import numpy as np
 import cv2
+from fer import FER
 from tmdb import get_movies_by_emotion
-import traceback
 
 app = FastAPI()
 
-# Allow frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -23,6 +20,8 @@ app.add_middleware(
 class ImageData(BaseModel):
     image: str
 
+detector = FER()
+
 @app.post("/detect_emotion/")
 async def detect_emotion(data: ImageData):
     try:
@@ -30,12 +29,17 @@ async def detect_emotion(data: ImageData):
         np_arr = np.frombuffer(img_data, np.uint8)
         img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
 
-        result = DeepFace.analyze(img, actions=['emotion'], enforce_detection=False)
-        dominant_emotion = result[0]['dominant_emotion']
+        result = detector.detect_emotions(img)
 
-        movies = get_movies_by_emotion(dominant_emotion)
-        return {"emotion": dominant_emotion, "movies": movies}
+        if not result:
+            return {"emotion": "neutral", "movies": get_movies_by_emotion("neutral")}
+
+        emotions = result[0]["emotions"]
+        dominant = max(emotions, key=emotions.get)
+
+        movies = get_movies_by_emotion(dominant)
+        return {"emotion": dominant, "movies": movies}
 
     except Exception as e:
-        print("Emotion detection error:", str(e))  # <-- Add this line
-        raise HTTPException(status_code=500, detail="Failed to detect emotion.")
+        print("Error:", e)
+        raise HTTPException(status_code=500, detail="Failed to detect emotion")
