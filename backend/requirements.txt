@@ -1,17 +1,11 @@
-setuptools>=65.0.0
-wheel>=0.38.0
-
 fastapi==0.115.12
 uvicorn==0.34.2
 python-dotenv==1.0.1
 requests==2.32.3
 
-# Emotion detection
 fer==22.5.0
 opencv-python-headless==4.10.0.82
 onnxruntime==1.20.0
 numpy==1.26.4
-
-# Moviepy dependencies
 moviepy==1.0.3
-pillow==9.5.0                
+pillow==10.2.0
