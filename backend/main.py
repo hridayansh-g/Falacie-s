@@ -4,6 +4,19 @@ from pydantic import BaseModel
 import base64
 import numpy as np
 import cv2
+import sys
+import types
+
+# ---- moviepy stub: fer ko sirf Video ke liye chahiye, hum video use hi nahi kar rahe ----
+# Render par moviepy/pillow ke issues se bachne ke liye ek dummy module bana rahe hain.
+if "moviepy" not in sys.modules:
+    moviepy_stub = types.ModuleType("moviepy")
+    editor_stub = types.ModuleType("editor")
+    moviepy_stub.editor = editor_stub
+    sys.modules["moviepy"] = moviepy_stub
+    sys.modules["moviepy.editor"] = editor_stub
+# ------------------------------------------------------------------ #
+
 from fer import FER
 from tmdb import get_movies_by_emotion
 
