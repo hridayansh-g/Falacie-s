@@ -4,8 +4,7 @@ import EmotionResult from "./components/EmotionResult";
 import Webcam from "react-webcam";
 
 // Backend URL (local dev + easy deploy later)
-const BACKEND_URL =
-  process.env.REACT_APP_BACKEND_URL || "http://localhost:8000";
+const BACKEND_URL = "https://falacie-s.onrender.com";
 
 function App() {
   const [imageSrc, setImageSrc] = useState(null);
